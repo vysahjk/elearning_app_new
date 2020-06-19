@@ -1,0 +1,24 @@
+<div class="container section_cours">
+  <div>
+    <div class="card" style="max-width: 600px;">
+      <div class="row no-gutters">
+        <div class="col-md-4 m-0">
+          <video [src]="src" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <a [routerLink]="link">
+              <h5 class="card-title text-dark capitalize">{{title}}</h5>
+            </a>
+            <p class="card-text text-dark">This is a wider card with supporting text below as a natural lead-in to
+              additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

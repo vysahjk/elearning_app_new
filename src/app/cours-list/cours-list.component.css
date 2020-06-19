@@ -1,0 +1,11 @@
+.section_cours {
+    margin-top: 25px;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    color: black;
+}
+
+video {
+  width: 100%;
+}

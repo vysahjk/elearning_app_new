@@ -1,0 +1,3 @@
+<div class="section_cours" *ngFor="let item of listcours; let i = index">
+  <app-cours-list [src]="listphotos[i]" [title]="item" [link]='item'></app-cours-list>
+</div>

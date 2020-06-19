@@ -1,0 +1,51 @@
+<div class="d-flex" id="wrapper">
+
+
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="list-group list-group-flush">
+
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h4 class="text-dark capitalize">Cours: {{ cours_actuel  }}</h4>
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <button (click)="showVideo(item, i)"
+                [ngClass]="{'list-group-item': true, 'list-group-item-action capitalize' : true , 'bg-dark text-white': videoactuel === item}"
+                *ngFor="let item of listvideosmenu; let i = index"><strong>Ch{{ i+1 }}
+                </strong>{{ item }}</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+
+    <div class="container section_video">
+      <div class="title_video">
+        <h2 class="capitalize"><span class="text-muted">Watching: </span>{{ videoactuel }}</h2>
+        <h5><strong class="display-5 text-muted">from: <span class="text-white capitalize">Cours
+              {{ cours_actuel  }}</span></strong>
+        </h5>
+      </div>
+      <video #myVideo controls></video>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
