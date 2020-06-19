@@ -24,9 +24,10 @@ export class CoursComponent implements OnInit {
     this.listphotos = [
       "https://i.imgur.com/ojVE9eQ.mp4",
       "https://i.imgur.com/iL4TlmD.mp4",
-      "https://i.imgur.com/0BrCGsa.mp4"
+      "https://i.imgur.com/0BrCGsa.mp4",
+      "https://i.imgur.com/tBHgTg8.mp4"
     ]
-    
+
   }
 
 }
