@@ -32,7 +32,7 @@ export class DetailsComponent implements OnInit, AfterViewInit {
         this.listvideos = data;
         this.listvideosmenu = data.map((video) => video.replace(/^0[0-9]_/, '').replace(".mp4", "").split("_").join(" "));
         this.videoactuel = this.listvideosmenu[0];
-        this.video.nativeElement.setAttribute('src', `http://learning.nibaldonoso.fr:4100/${this.cours_actuel}/${data[0]}`);
+        this.video.nativeElement.setAttribute('src', `https://learning.nibaldonoso.fr:4100/${this.cours_actuel}/${data[0]}`);
         this.video.nativeElement.volume = 0.5;
         this.showVideo(this.videoactuel, 0);
       })
@@ -41,8 +41,8 @@ export class DetailsComponent implements OnInit, AfterViewInit {
 
   showVideo(video, index) {
     this.videoactuel = video;
-    this.video.nativeElement.setAttribute('src', `http://learning.nibaldonoso.fr:4100/${this.cours_actuel}/${this.listvideos[index]}`);
-    this.video.nativeElement.volume = 0.05;
+    this.video.nativeElement.setAttribute('src', `https://learning.nibaldonoso.fr:4100/${this.cours_actuel}/${this.listvideos[index]}`);
+    this.video.nativeElement.volume = 0.5;
     this.video.nativeElement.play();
 
     this.video.nativeElement.addEventListener('timeupdate', () => {
@@ -50,8 +50,8 @@ export class DetailsComponent implements OnInit, AfterViewInit {
         index++;
         if (index < this.listvideos.length) {
           this.videoactuel = this.listvideosmenu[index];
-          this.video.nativeElement.setAttribute('src', `http://learning.nibaldonoso:4100/${this.cours_actuel}/${this.listvideos[index]}`);
-          this.video.nativeElement.volume = 0.05;
+          this.video.nativeElement.setAttribute('src', `https://learning.nibaldonoso:4100/${this.cours_actuel}/${this.listvideos[index]}`);
+          this.video.nativeElement.volume = 0.5;
           this.video.nativeElement.play();
         } else {
           // console.log("terminé");
