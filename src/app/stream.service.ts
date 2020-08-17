@@ -10,11 +10,11 @@ export class StreamService {
   constructor() { }
 
   async getListVideos(cours_name: string) {
-    return await fetch(`https://learning.nibaldonoso.fr:4100/list/cours/${cours_name}`);
+    return await fetch(`https://nibaldonoso.fr:4100/list/cours/${cours_name}`);
   }
 
   async getListCours() {
-    return await fetch(`https://learning.nibaldonoso.fr:4100/list/cours`);
+    return await fetch(`https://nibaldonoso.fr:4100/list/cours`);
   }
 
 }

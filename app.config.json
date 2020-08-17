@@ -1,0 +1,10 @@
+{
+  apps : [
+    {
+      name      : "elearning_app",
+      script    : "npx",
+      interpreter: "none",
+      args: "serve -p 8899 -s dist/elearning-master-new/"
+    }
+  ]
+}
